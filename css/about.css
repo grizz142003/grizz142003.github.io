@@ -1,0 +1,113 @@
+#about {
+    background-image: url('../images/Background.png');
+	text-shadow: black -1px -1px;
+    text-align: center;
+}
+
+#Skills {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0px;
+    list-style-type: none;
+}
+
+#Skills li::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#Skills .Python::before{
+        background-image: url(../images/Python.png);
+}
+
+#Python {
+    list-style-type: none;
+}
+#Python li::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#Python .Tensorflow::before{
+        background-image: url(../images/Tensorflow.png);
+}
+
+#Python .Scikit::before{
+        background-image: url(../images/Scikit.png);
+}
+
+#Skills .C::before{
+        background-image: url(../images/C.png);
+}
+
+#Skills .Java::before{
+        background-image: url(../images/Java.png);
+}
+
+#Skills .Web::before{
+        background-image: url(../images/Web.png);
+}
+
+#Skills .Comp::before{
+        border-radius: 50%;
+        background-image: url(../images/Comp.png);
+}
+
+#Education {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0px;
+    list-style-type: none;
+}
+#Education li::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#Education .Humber::before{
+        border-radius: 50%;
+        background-image: url(../images/HumberLogoBG.jpg);
+}
+
+#WorkExp {
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0px;
+    list-style-type: none;
+}
+
+#WorkExp li::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#WorkExp .Tenecom::before{
+    background-image: url(../images/Tenecom.png);
+}
