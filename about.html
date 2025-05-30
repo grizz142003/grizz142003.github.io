@@ -4,6 +4,8 @@
         <title>Gianluca's Personal Website</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 	<body>
 	    <header>
@@ -13,54 +15,68 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="projects.html">Projects</a></li>
-
+                    <li><a href="calculator.html">Calculator</a></li>
                 </ul>
             </nav>
         </header>
 		<main>
 			<section id="about">
-                <div class="section-inner">
-                    <h2>About me</h2>
-                    <p>Computer Engineering Technology student seeking a Fall2025/Winter 2026 co-op experience to apply skills in hardware,<br> 
-                        software, operating systems and networking in a dynamic work environment. </p>
-                    <h3>Skills</h3>
+                <div class="section-inner" data-aos="fade-up">
+                    <h2>About Me</h2>
+                    <p>
+                      I'm a passionate <strong>Computer Engineering Technology</strong> student at Humber College, 
+                      currently seeking a <strong>Fall 2025 / Winter 2026 co-op opportunity</strong>. I’m eager to apply my hands-on experience 
+                      in software, hardware, operating systems, and networking within a dynamic and forward-thinking work environment.
+                    </p>
+
+                    <h3>Technical Skills</h3>
                     <ul id="Skills">
-                        <li class="Python">Python, including python libraries such as
-                            <ul id="Python">
-                                <li class="Tensorflow">Tensorflow</li>
-                                <li class="Scikit">Scikit learn</li>
-                            </ul>
-                        </li>
-                        <li class="C">C, including operating system programming</li>
-                        <li class="Java">Java, including andriod applications</li>
-                        <li class="Web">Web development, including html, css, javascript</li>
-                        <li class="Comp">Computer Architecture, built an 8 bit computer on bread boards</li>
+                      <li class="Python">Python
+                        <ul id="Python">
+                          <li class="Tensorflow">TensorFlow</li>
+                          <li class="Scikit">Scikit-Learn</li>
+                        </ul>
+                      </li>
+                      <li class="C">C Programming — including low-level OS development</li>
+                      <li class="Java">Java — including Android app development</li>
+                      <li class="Web">Web Development — HTML, CSS, JavaScript</li>
+                      <li class="Comp">Digital Logic & Architecture — designed and built an 8-bit computer on breadboards</li>
                     </ul>
+
                     <h3>Education</h3>
                     <ul id="Education">
-                        <li class="Humber">Humber College, Etobicoke, Ontario
-                            <ul>
-                                <li>Dean's Honour List, Faculty of Applied Sciences</li>
-                                <li>85% overall CGPA during first 3 semesters</li>
-                            </ul>
-                        </li>
+                      <li class="Humber">
+                        <strong>Humber College</strong>, Etobicoke, ON
+                        <ul>
+                          <li>Dean's Honour List — Faculty of Applied Sciences</li>
+                          <li>Maintaining an 85% CGPA across first 3 semesters</li>
+                        </ul>
+                      </li>
                     </ul>
+
                     <h3>Work Experience</h3>
                     <ul id="WorkExp">
-                        <li class="Tenecom">Tenecom Solutions, Vaughan, Ontario
-                            <ul>
-                                <li> Resolved customer-submitted tickets related to Microsoft Azure and general Windows issues, ensuring timely and effective support</li>
-                                <li>Assisted in deploying new customer servers and implemented Tenecom’s cybersecurity solutions to enhance the security of client systems</li>
-                                <li>Developed Windows Powershell scripts for silent installations and software updates, enabling remote background deployment across customer systems</li>
-                            </ul>
-                        </li>
+                      <li class="Tenecom">
+                        <strong>Tenecom Solutions</strong>, Vaughan, ON
+                        <ul>
+                          <li>Resolved Microsoft Azure and Windows issues for clients through submitted service tickets</li>
+                          <li>Assisted in server deployments and implemented cybersecurity protocols</li>
+                          <li>Created PowerShell scripts for silent installs and background software updates</li>
+                        </ul>
+                      </li>
                     </ul>
                 </div>
             </section>
 		</main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        </script>
 		<footer>
 			© Copyright Gianluca Rizzo, 2025
 		</footer>
 	</body>
-<html>
-			
+</html>

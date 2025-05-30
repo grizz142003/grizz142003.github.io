@@ -1,8 +1,14 @@
 #about {
     background-image: url('../images/Background.png');
-	text-shadow: black -1px -1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     text-align: center;
+    padding-top: 60px; /* prevents overlap with navbar */
+    padding-bottom: 80px; /* adds space at bottom */
 }
+
 
 #Skills {
     width: 500px;
