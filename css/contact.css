@@ -1,6 +1,12 @@
 #contact {
     background-image: url('../images/Background.png');
-	text-shadow: black -1px -1px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: #fff;
+    text-align: center;
+    justify-content:flex-start;
 }
 
 .Email{
@@ -41,10 +47,44 @@
   vertical-align: middle;
 }
 
-#contacts .github::before{
-      background-image: url(../images/github.png);
+
+
+
+.section-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
-#contacts .LinkedIn::before{
-      background-image: url(../images/LinkedIn.png);
+.section-inner:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+#contacts {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+#contacts li {
+    margin-bottom: 10px;
+}
+
+#contacts a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#contacts a:hover {
+    color: #00bfff;
+}
+
+@media (max-width: 600px) {
+    #contact {
+        padding: 60px 10px;
+    }
 }
