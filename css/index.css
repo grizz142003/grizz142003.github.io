@@ -16,3 +16,7 @@
     background-image: url('../images/Index.jpg');
 	text-shadow: black -1px -1px;
 }
+
+#hero .section-inner{
+    text-align: center;
+}

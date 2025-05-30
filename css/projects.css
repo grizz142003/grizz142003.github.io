@@ -1,0 +1,66 @@
+#projects {
+    background-image: url('../images/Background.png');
+	text-shadow: black -1px -1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.projects h1 {
+    font-size: 4em;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 1px 1px 2px black;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+  background-color: #121212;
+  border-radius: 16px;
+  padding: 24px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.card a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
