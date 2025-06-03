@@ -4,6 +4,8 @@
         <title>Gianluca's Personal Website</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/projects.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -19,12 +21,13 @@
         </header>
         <main>
             <section id="projects">
+                <div class="projects-scroll" data-aos="fade-up"> 
                 <div class="projects">
                     <div class="card">
                         <img src="images/x86_Dev.png" alt="Operating System Screen">
                         <h3>Simple x86 Operating System</h3>
                         <p>Currently working on implementing a simple x86 based operating system, this project is to help me better understand the how operating systems work.</p>
-                        <a href="#">Learn more →</a>
+                        <a href="Projects/x86OS.html">Learn more →</a>
                     </div>
                     <div class="card">
                         <img src="images/TensorflowGraph.png" alt="Service Icon">
@@ -39,18 +42,22 @@
                         <a href="#">Learn more →</a>
                     </div>
                     <div class="card">
-                        <img src="" alt="Service Icon">
+                        <img src="images/android.jpg" alt="Service Icon">
                         <h3>Android Studio Apps</h3>
                         <p>Created multiple simple android studio lab projects.</p>
                         <a href="#">Learn more →</a>
                     </div>
                 </div>
+                </div>
             </section>
 
 
-        </main>
+        </main>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> 
+        <script src="js/init-aos.js"></script> 
         <footer>
             © Copyright Gianluca Rizzo, 2025
-        </footer>
+        </footer>  
+
     </body>
 </html>
