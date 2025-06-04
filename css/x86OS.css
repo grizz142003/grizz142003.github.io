@@ -61,5 +61,5 @@ body {
   cursor: pointer;
   padding: 0 10px;
 }
-.carousel button.prev { left: -40px; }
-.carousel button.next { right: -80px; }
+.carousel button.prev { left: -40px; z-index: 1000;}
+.carousel button.next { right: -80px; z-index: 1000;}

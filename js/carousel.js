@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const carousel = document.querySelector('.carousel-inner');
+  const carousel = document.querySelector('.carousel-container');
   if (!carousel) return;
 
   const cards = Array.from(carousel.children);
