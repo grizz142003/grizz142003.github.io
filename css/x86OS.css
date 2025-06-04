@@ -54,6 +54,36 @@ body {
   height: auto;
   border-radius: 8px;
 }
+.code {
+  position: relative;
+  text-align: left;
+  width: 95%;
+  max-height: 200px;          
+  overflow-y: auto;           
+  padding: 10px;
+  background-color: #1a1a1a;
+  color: #00ffcc;
+  font-family: monospace;
+  font-size: 0.85rem;
+  border: 2px solid #03445a;
+  border-radius: 8px;
+  white-space: pre-wrap;      
+  line-height: 1.4;
+  border-top: 25px solid #03445a;
+}
+
+.code-header {
+  position: absolute;
+  top: -8px;                     /* lift above the border */
+  left: 10px;
+  background-color: #1a1a1a;     /* match .code background */
+  color: #00bfff;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 0 8px;
+  border-radius: 4px;
+  z-index: 1;
+}
 
 .carousel button.prev,
 .carousel button.next {
