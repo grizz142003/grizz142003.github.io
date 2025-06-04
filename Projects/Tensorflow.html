@@ -3,7 +3,7 @@
     <head>
         <title>Gianluca's Personal Website</title>
         <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/x86OS.css">
+        <link rel="stylesheet" href="../css/TensorFlow.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
     </head>
@@ -20,53 +20,78 @@
             </nav>
         </header>
         <main>
-            <section id="x86" >
-                <div class="x86class" data-aos="fade-up">
-                    <h3>X86 Architecture Operating System</h3>
+            <section id="TensorFlow" >
+                <div class="TensorFlowClass" data-aos="fade-up">
+                    <h3>TensorFlow AI Models</h3>
                     <div class="carousel">
                         <button class="prev" aria-label="Previous">&#9664</button>
                         <div class="carousel-container">
                             <div class="card">
                                 <h4><strong>Overview</strong></h4>
-                                <p>Currently developing a basic operating system that runs within the Bochs x86 emulator.
-                                     Using <a href="https://littleosbook.github.io">The Little Book About OS Development</a>,
-                                    I have started to impliment simple features into the OS.<br><br><strong>project is still ongoing</strong></p>
-                                    <img src="../images/x86_Dev.png">
+                                <p>Developed, improved, and tweaked Tensorflow models from the <a href="https://www.tensorflow.org/tutorials">Tensorflow Docs</a> online learning modules provided by google.
+                                Implemented the initial examples, identified and resolved bugs caused by outdated content,
+                                 and made necessary adjustments to ensure compatibility with the latest TensorFlow versions.</p>
+                                    <img src="../images/TensorflowGraph.png">
                             </div>
                             <div class="card">
-                                <h4><strong>Printf Function</strong></h4>
-                                <p>The first feature I implemented was a custom framebuffer driver that supports screen output capabilities such as line breaks and screen clearing.
-                                     This driver was designed to closely emulate the behavior of C’s printf function from the standard I/O library.</p>
-                                <p>Below is the full content of the FrameBuff.c file, which is primarily responsible for implementing this functionality. 
-                                    Additional supporting functions—such as outb—as well as various constant definitions are provided through the FrameBuff.h 
-                                    header and other included files.</p>
+                                <h4><strong>Image Classification</strong></h4>
+                                <p></p>
                                 <div class="code">
-                                    <div class="code-header">FrameBuff.c</div>
+                                    <div class="code-header">TfDoc1.py</div>
                                     <pre><code>
 </code></pre>
                                 </div>     
                             </div>
                             <div class="card">
-                                <h4><strong>Serial Output</strong></h4>
-                                <p>Using Bochs emulator you can monitor the actions of the emulated serial ports and read the outputs. 
-                                    Using this feature I made a serial port driver that configures the serial port then outputs serial transmissions. 
-                                    With this I can use the serial port as an error log of sorts because I can see the output in a seperate file from the 
-                                    operating system. 
-                                </p>
+                                <h4><strong>Text Classification</strong></h4>
+                                <p></p>
                                 <div class="code">
-                                    <div class="code-header">Serial.c</div>
+                                    <div class="code-header">TfDoc2.py</div>
                                     <pre><code>
 </code></pre>
                                 </div>  
                             </div>
                             <div class="card">
-                                <h4><strong>Global Descriptor Table</strong></h4>
-                                <p>Currently Working on implimenting a Global Descriptor Table for my operating system, The purpose of this table is to 
-                                    Seperate segments in the memory to seperate data code, and give certain segments more or less permissions based on who or 
-                                    what is executing the code.
-                                </p>
+                                <h4><strong>Text Classification Using TFhub</strong></h4>
+                                <p></p>
                                 <div class="code">
-                                    <div class="code-header">Serial.c</div>
+                                    <div class="code-header">TfDoc3.py</div>
+                                    <pre><code>
+</code></pre>
+                                </div>  
+                            </div>
+                            <div class="card">
+                                <h4><strong>Text Classification Using TFhub</strong></h4>
+                                <p></p>
+                                <div class="code">
+                                    <div class="code-header">TfDoc3.py</div>
+                                    <pre><code>
+</code></pre>
+                                </div>  
+                            </div>
+                            <div class="card">
+                                <h4><strong>Regression</strong></h4>
+                                <p></p>
+                                <div class="code">
+                                    <div class="code-header">TfDoc3.py</div>
+                                    <pre><code>
+</code></pre>
+                                </div>  
+                            </div>
+                            <div class="card">
+                                <h4><strong>Overfit and Underfit</strong></h4>
+                                <p></p>
+                                <div class="code">
+                                    <div class="code-header">TfDoc3.py</div>
+                                    <pre><code>
+</code></pre>
+                                </div>  
+                            </div>
+                            <div class="card">
+                                <h4><strong>Save and Load</strong></h4>
+                                <p></p>
+                                <div class="code">
+                                    <div class="code-header">TfDoc3.py</div>
                                     <pre><code>
 </code></pre>
                                 </div>  
