@@ -35,10 +35,11 @@
                             </div>
                             <div class="card">
                                 <h4><strong>Printf Function</strong></h4>
-                                <p>The first feature I implimented is a custom framebuffer driver
-                                     with support for screen output features such as line breaks and clear screen functionality. 
-                                     This was designed to emulate the behavior of C’s printf function from the standard I/O library.</p>
-                                <p>The specific files in the github repository that handle the Printf functionality are FrameBuff.c, and FrameBuff.h</p>
+                                <p>The first feature I implemented was a custom framebuffer driver that supports screen output capabilities such as line breaks and screen clearing.
+                                     This driver was designed to closely emulate the behavior of C’s printf function from the standard I/O library.</p>
+                                <p>Below is the full content of the FrameBuff.c file, which is primarily responsible for implementing this functionality. 
+                                    Additional supporting functions—such as outb—as well as various constant definitions are provided through the FrameBuff.h 
+                                    header and other included files.</p>
                                 <div class="code">
                                     <div class="code-header">FrameBuff.c</div>
                                     <pre><code>#include "FrameBuff.h"

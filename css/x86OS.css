@@ -48,6 +48,8 @@ body {
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   color: #fff;
   text-align: center;
+  max-height: 600px;
+  overflow-y: auto;
 }
 .card img {
   width: 100%;
@@ -56,7 +58,7 @@ body {
 }
 .code {
   position: relative;
-  max-height: 220px;          
+  max-height: 420px;          
   overflow-y: visible;           
   background-color: #1a1a1a;
   color: #00ffcc;
@@ -71,12 +73,12 @@ body {
   text-align: left;
   padding-left: 10px;
   position: inherit;
-  max-height: 200px;
+  max-height: 400px;
   overflow-y: auto;
 }
 
 .code-header {
-  max-height: 200px;   
+  max-height: 400px;   
   position: absolute;
   top: -22px;                     /* lift above the border */
   left: 10px;
