@@ -56,33 +56,32 @@ body {
 }
 .code {
   position: relative;
-  width: 95%;
-  max-height: 200px;          
+  max-height: 220px;          
   overflow-y: visible;           
   background-color: #1a1a1a;
   color: #00ffcc;
   font-family: monospace;
   font-size: 0.85rem;
   border: 2px solid #03445a;
-  border-radius: 8px;
-  white-space: pre-wrap;      
+  border-radius: 8px; 
   line-height: 1.4;
   border-top: 25px solid #03445a;
 }
 .code pre{  
   text-align: left;
-  padding: 10px;
+  padding-left: 10px;
   position: inherit;
   max-height: 200px;
   overflow-y: auto;
 }
 
 .code-header {
+  max-height: 200px;   
   position: absolute;
   top: -22px;                     /* lift above the border */
   left: 10px;
-  background-color: #1a1a1a;     /* match .code background */
-  color: #00bfff;
+  background-color: #03445a;     /* match .code background */
+  color: #1a1a1a;
   font-weight: bold;
   font-size: 0.85rem;
   border-radius: 4px;
