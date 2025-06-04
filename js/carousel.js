@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!carousel) return;
 
   const cards = Array.from(carousel.children);
-  const radius = carousel.clientWidth / 2;
+  const radius = carousel.clientWidth;
   const cardWidth = cards[0].clientWidth;
   const len = cards.length;
   let index = 0;
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cards[prevIndex].style.transform = `translateX(${-cardWidth * 0.6}px) translateZ(${-radius}px)`;
     cards[prevIndex].style.opacity = '0.5';
 
-    cards[index].style.transform = `translateX(0px) translateZ(${radius}px)`;
+    cards[index].style.transform = `translateX(0px)`;
     cards[index].style.opacity = '1';
 
     cards[nextIndex].style.transform = `translateX(${cardWidth * 0.6}px) translateZ(${-radius}px)`;

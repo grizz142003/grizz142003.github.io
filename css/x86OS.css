@@ -20,8 +20,8 @@ body {
 
 .carousel {
   position: relative;
-  width: 320px;
-  height: 220px;
+  width: 520px;
+  height: 70vh;
   margin: 40px auto;
   perspective: 1000px;
 }
@@ -47,6 +47,12 @@ body {
   padding: 24px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   color: #fff;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .carousel button.prev,

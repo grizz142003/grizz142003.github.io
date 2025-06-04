@@ -27,20 +27,112 @@
                         <button class="prev" aria-label="Previous">&#9664</button>
                         <div class="carousel-container">
                             <div class="card">
-                                <h4><strong>Printf functionality</strong></h4>
-                                <p>Currently developing a basic operating system that runs within the Bochs x86 emulator. Implemented a custom framebuffer driver with support for screen output features such as line breaks and clear screen functionality, designed to emulate the behavior of C’s printf function from the standard I/O library.</p>
+                                <h4><strong>Overview</strong></h4>
+                                <p>Currently developing a basic operating system that runs within the Bochs x86 emulator.
+                                     Using <a href="https://littleosbook.github.io">The Little Book About OS Development</a>,
+                                    I have started to impliment simple features into the OS.<br><br><strong>project is still ongoing</strong></p>
+                                    <img src="../images/x86_Dev.png">
                             </div>
                             <div class="card">
-                                <h4><strong>Printf</strong></h4>
-                                <p>Currently developing a basic operating system that runs within the Bochs x86 emulator. Implemented a custom framebuffer driver with support for screen output features such as line breaks and clear screen functionality, designed to emulate the behavior of C’s printf function from the standard I/O library.</p>
+                                <h4><strong>Printf Function</strong></h4>
+                                <p>The first feature I implimented is a custom framebuffer driver
+                                     with support for screen output features such as line breaks and clear screen functionality. 
+                                     This was designed to emulate the behavior of C’s printf function from the standard I/O library.</p>
+                                <p>The specific files in the github repository that handle the Printf functionality are FrameBuff.c, and FrameBuff.h</p>
+                                <div class="code"><p>
+                                    #include "FrameBuff.h"
+
+static uint16_t get_curser(void){
+    uint16_t pos;
+    outb(FB_COMMAND_PORT, FB_HIGH_BYTE_COMMAND);
+    pos = ((uint16_t)inb(FB_DATA_PORT)) << 8;
+    outb(FB_COMMAND_PORT, FB_LOW_BYTE_COMMAND);
+    pos |= (uint16_t)inb(FB_DATA_PORT);
+    return pos;
+}
+
+uint16_t fb_get_curser(void){
+    return get_curser();
+}
+
+static void set_curser(uint16_t pos){
+    outb(FB_COMMAND_PORT, FB_HIGH_BYTE_COMMAND);
+    outb(FB_DATA_PORT, pos >> 8);
+    outb(FB_COMMAND_PORT, FB_LOW_BYTE_COMMAND);
+    outb(FB_DATA_PORT, pos & 0xFF);
+}
+
+void fb_move_curser(uint16_t pos){
+    set_curser(pos);
+}
+
+static void scroll(void){
+    for (int row = 0; row < VGA_LENGTH - 1; row++){
+        for (int col = 0; col < VGA_WIDTH; col++){
+            VGA_BUFF[row * VGA_WIDTH + col] = VGA_BUFF[(row + 1)* VGA_WIDTH + col];
+        }
+    }
+    uint16_t blank = DEFAULT_TEXT | ' ';
+    for (int col = 0; col < VGA_WIDTH; col++){
+        VGA_BUFF[(VGA_LENGTH - 1) * VGA_WIDTH + col] = blank;
+    }
+}
+
+void fb_clear(void){
+    
+    uint16_t blank = DEFAULT_TEXT | ' ';
+    
+    for (int row = 0; row < VGA_LENGTH; row++){
+        for (int col = 0; col < VGA_WIDTH; col++){
+            VGA_BUFF[row *VGA_WIDTH + col] = blank;
+        }
+    }
+    set_curser(0);
+}
+int fb_write(const char *buf, uint32_t len){
+    
+    uint32_t i;
+    uint16_t pos = get_curser();
+    
+    for (i = 0; i < len; i++) {
+        char c = buf[i];
+        switch (c) {
+            case '\n':
+                pos = ((pos / VGA_WIDTH) + 1) * VGA_WIDTH;
+                break;
+            
+            case '\r': 
+                pos -= pos % VGA_WIDTH;
+                break;
+            
+            default:
+                VGA_BUFF[pos++] = DEFAULT_TEXT | (uint8_t)c;
+        }
+        if (pos > VGA_WIDTH * VGA_LENGTH){
+            scroll();
+            pos -= VGA_WIDTH;
+        }
+    }
+    set_curser(pos);
+    return i;
+}
+</p>
+                                </div>     
                             </div>
                             <div class="card">
-                                <h4><strong>functionality</strong></h4>
-                                <p>Currently developing a basic operating system that runs within the Bochs x86 emulator. Implemented a custom framebuffer driver with support for screen output features such as line breaks and clear screen functionality, designed to emulate the behavior of C’s printf function from the standard I/O library.</p>
+                                <h4><strong>Serial Output</strong></h4>
+                                <p>Using Bochs emulator you can monitor the actions of the emulated serial ports and read the outputs. 
+                                    Using this feature I made a serial port driver that configures the serial port then outputs serial transmissions. 
+                                    With this I can use the serial port as an error log of sorts because I can see the output in a seperate file from the 
+                                    operating system. 
+                                </p>
                             </div>
                             <div class="card">
-                                <h4><strong>1234</strong></h4>
-                                <p>Currently developing a basic operating system that runs within the Bochs x86 emulator. Implemented a custom framebuffer driver with support for screen output features such as line breaks and clear screen functionality, designed to emulate the behavior of C’s printf function from the standard I/O library.</p>
+                                <h4><strong>Global Descriptor Table</strong></h4>
+                                <p>Currently Working on implimenting a Global Descriptor Table for my operating system, The purpose of this table is to 
+                                    Seperate segments in the memory to seperate data code, and give certain segments more or less permissions based on who or 
+                                    what is executing the code.
+                                </p>
                             </div>
                         </div>
                         <button class="next" aria-label="Next">&#9654;</button>
