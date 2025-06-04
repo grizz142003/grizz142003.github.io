@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gianluca's Personal Website</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/x86OS.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="x86" >
+                <div class="x86class" data-aos="fade-up">
+                    <h3>X86 Architecture Operating System</h3>
+                    <div class="carousel">
+                        <button class="prev" aria-label="Previous">&#9664</button>
+                        <div class="carousel-container">
+                            <div class="card">
+                                <h4><strong>Overview</strong></h4>
+                                <p>Currently developing a basic operating system that runs within the Bochs x86 emulator.
+                                     Using <a href="https://littleosbook.github.io">The Little Book About OS Development</a>,
+                                    I have started to impliment simple features into the OS.<br><br><strong>project is still ongoing</strong></p>
+                                    <img src="../images/x86_Dev.png">
+                            </div>
+                            <div class="card">
+                                <h4><strong>Printf Function</strong></h4>
+                                <p>The first feature I implemented was a custom framebuffer driver that supports screen output capabilities such as line breaks and screen clearing.
+                                     This driver was designed to closely emulate the behavior of C’s printf function from the standard I/O library.</p>
+                                <p>Below is the full content of the FrameBuff.c file, which is primarily responsible for implementing this functionality. 
+                                    Additional supporting functions—such as outb—as well as various constant definitions are provided through the FrameBuff.h 
+                                    header and other included files.</p>
+                                <div class="code">
+                                    <div class="code-header">FrameBuff.c</div>
+                                    <pre><code>
+</code></pre>
+                                </div>     
+                            </div>
+                            <div class="card">
+                                <h4><strong>Serial Output</strong></h4>
+                                <p>Using Bochs emulator you can monitor the actions of the emulated serial ports and read the outputs. 
+                                    Using this feature I made a serial port driver that configures the serial port then outputs serial transmissions. 
+                                    With this I can use the serial port as an error log of sorts because I can see the output in a seperate file from the 
+                                    operating system. 
+                                </p>
+                                <div class="code">
+                                    <div class="code-header">Serial.c</div>
+                                    <pre><code>
+</code></pre>
+                                </div>  
+                            </div>
+                            <div class="card">
+                                <h4><strong>Global Descriptor Table</strong></h4>
+                                <p>Currently Working on implimenting a Global Descriptor Table for my operating system, The purpose of this table is to 
+                                    Seperate segments in the memory to seperate data code, and give certain segments more or less permissions based on who or 
+                                    what is executing the code.
+                                </p>
+                                <div class="code">
+                                    <div class="code-header">Serial.c</div>
+                                    <pre><code>
+</code></pre>
+                                </div>  
+                            </div>
+                        </div>
+                        <button class="next" aria-label="Next">&#9654;</button>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="../js/init-aos.js"></script>
+        <script src="../js/carousel.js"></script>
+        <footer>
+            © Copyright Gianluca Rizzo, 2025
+        </footer>
+    </body>
+</html>
