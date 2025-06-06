@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 1
   function update() {
-    carousel.style.transform = `translateZ(-${radius}px) rotateY(${rotangle}deg)`
+    carousel.style.transform = `translateZ(-${radius}px) rotateY(${rotangle}deg)`;
   }
 
   document.querySelector('.next').addEventListener('click', () => {
