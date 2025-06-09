@@ -7,11 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const angle = 360 / cards.length;
   let rotangle = 0;
 
-  cards.forEach((card, idx) => {
-    card.style.position = 'absolute';
-    card.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-    card.style.transform = `rotateY(${angle * idx}deg) translateZ(${radius}px)`;
-  });
+cards.forEach((card, idx) => {
+  card.style.position = 'absolute';
+  card.style.top = '50%';
+  card.style.left = '50%';
+  card.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+  card.style.transform =
+    `translate(-50%, -50%) rotateY(${angle * idx}deg) translateZ(${radius}px)`;
+});
 1
   function update() {
     carousel.style.transform = `translateZ(-${radius}px) rotateY(${rotangle}deg)`;

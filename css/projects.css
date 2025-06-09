@@ -18,7 +18,7 @@
 
 .carousel-container {
   position: relative;
-  width: 600px;
+  width: 1000px;
   height: 70vh;
   margin: 40px auto;
   perspective: 1000px;
@@ -49,6 +49,7 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   position: absolute;
+  text-align: center;
 }
 
 .card:hover {
@@ -57,9 +58,11 @@
 }
 
 .card img {
-  width: 100%;
+  width: auto;
   height: auto;
-  border-radius: 8px;
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 20px;
 }
 
 .card h3 {
@@ -88,7 +91,7 @@
 .next {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(25%);
   background-color: rgba(0,0,0,0.6);
   border: none;
   color: #fff;
@@ -106,9 +109,9 @@
 }
 
 .prev {
-  left: -40px;  /* shift left of container */
+  left: 170px;  /* shift left of container */
 }
 
 .next {
-  right: -40px; /* shift right of container */
+  right: 170px; /* shift right of container */
 }
