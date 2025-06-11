@@ -1,89 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Gianluca's Personal Website</title>
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/ProjectsCss/BreadBoard.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
-    </head>
-
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="BreadBoard" >
-                <div class="BreadBoardClass" data-aos="fade-up">
-                    <h3>X86 Architecture Operating System</h3>
-                    <div class="carousel">
-                        <button class="prev" aria-label="Previous">&#9664</button>
-                        <div class="carousel-container">
-                            <div class="card">
-                                <h4><strong>Overview</strong></h4>
-                                <p>Currently developing a basic operating system that runs within the Bochs x86 emulator.
-                                     Using <a href="https://littleosbook.github.io">The Little Book About OS Development</a>,
-                                    I have started to impliment simple features into the OS.<br><br><strong>project is still ongoing</strong></p>
-                                    <img src="../images/x86_Dev.png">
-                            </div>
-                            <div class="card">
-                                <h4><strong>Printf Function</strong></h4>
-                                <p>The first feature I implemented was a custom framebuffer driver that supports screen output capabilities such as line breaks and screen clearing.
-                                     This driver was designed to closely emulate the behavior of C’s printf function from the standard I/O library.</p>
-                                <p>Below is the full content of the FrameBuff.c file, which is primarily responsible for implementing this functionality. 
-                                    Additional supporting functions—such as outb—as well as various constant definitions are provided through the FrameBuff.h 
-                                    header and other included files.</p>
-                                <div class="code">
-                                    <div class="code-header">FrameBuff.c</div>
-                                    <pre><code>
-</code></pre>
-                                </div>     
-                            </div>
-                            <div class="card">
-                                <h4><strong>Serial Output</strong></h4>
-                                <p>Using Bochs emulator you can monitor the actions of the emulated serial ports and read the outputs. 
-                                    Using this feature I made a serial port driver that configures the serial port then outputs serial transmissions. 
-                                    With this I can use the serial port as an error log of sorts because I can see the output in a seperate file from the 
-                                    operating system. 
-                                </p>
-                                <div class="code">
-                                    <div class="code-header">Serial.c</div>
-                                    <pre><code>
-</code></pre>
-                                </div>  
-                            </div>
-                            <div class="card">
-                                <h4><strong>Global Descriptor Table</strong></h4>
-                                <p>Currently Working on implimenting a Global Descriptor Table for my operating system, The purpose of this table is to 
-                                    Seperate segments in the memory to seperate data code, and give certain segments more or less permissions based on who or 
-                                    what is executing the code.
-                                </p>
-                                <div class="code">
-                                    <div class="code-header">Serial.c</div>
-                                    <pre><code>
-</code></pre>
-                                </div>  
-                            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-Bit Breadboard Computer</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ProjectsCss/BreadBoard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="BreadBoard">
+            <div class="BreadBoardClass" data-aos="fade-up">
+                <h3>8-Bit Breadboard Computer</h3>
+                <div class="carousel">
+                    <button class="prev" aria-label="Previous">&#9664;</button>
+                    <div class="carousel-container">
+                        <div class="card">
+                            <h4><strong>Overview</strong></h4>
+                            <p>This project builds an 8-bit computer entirely on a breadboard to illustrate fundamental CPU operations. 
+                                Currently, registers,  ALU and the clock module are fully implemented, and work on the RAM unit is in progress. 
+                                The control unit will follow once memory is operational.<br><br><strong>Project Status: Ongoing</strong></p>
+                            <img src="../images/BreadBoard.jpg" alt="Breadboard Overview">
                         </div>
-                        <button class="next" aria-label="Next">&#9654;</button>
+                        <div class="card">
+                            <h4><strong>Registers</strong></h4>
+                            <p>Three 8-bit registers: one for instruction storage and two for intermediate values. 
+                                Each register can load, hold, and output data onto the system bus under clock control.
+                            <br><br><br><strong>A register</strong><br>Value: 10101101 or 173<br>
+                            <img src="../images/A-Reg.jpg" alt="Registers Module">
+                            <br><br><br><strong>B register</strong><br>Value: 10110111 or 183<br>
+                            <img src="../images/B-Reg.jpg" alt="Registers Module">
+                            <br><br><br><strong>Instruction register</strong><br>Value: 00110101 or 53<br>
+                            <img src="../images/Instruction-Reg.jpg" alt="Registers Module">
+                            </p>
+                        </div>
+                         <div class="card">
+                            <h4><strong>ALU (Arithmetic Logic Unit)</strong></h4>
+                            <p>The ALU executes 8-bit arithmetic operations—currently supporting addition and subtraction. 
+                                Its result is driven onto the system bus and it sets status flags to indicate zero or carry conditions.
+                                <br><br><br><strong>ALU output</strong><br>Value: 01100100 or 100<br><br>
+                            <img src="../images/ALU.jpg" alt="ALU Module">
+                            <br><br>When two 8-bit values are added and the true sum exceeds 255, the ALU only drives the lower 8 bits onto the bus—effectively subtracting 
+                            256 from the real result—and raises the carry flag. For example, adding 173 and 183 should give 356, but because 356 – 256 = 100, 
+                            the ALU output is 100 and the carry bit is set.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h4><strong>Clock</strong></h4>
+                            <p>The clock generator, built around a 555 timer, produces a stable square wave to synchronize all modules. 
+                                A central switch toggles between continuous operation—where an adjustable potentiometer sets the pulse frequency—and manual stepping mode, 
+                                which uses the 555 timer in a debounced push-button circuit to generate one clock pulse at a time.</p>
+                            <img src="../images/Clock.jpg" alt="Clock Module">
+                        </div>
+                       
+                        <div class="card">
+                            <h4><strong>RAM Unit</strong></h4>
+                            <p>The RAM unit is under development. It will provide read/write memory for program instructions and data.</p>
+                            <img src="../images/Ram.jpg" alt="RAM Module (In Progress)">
+                        </div>
+                        
                     </div>
+                    <button class="next" aria-label="Next">&#9654;</button>
                 </div>
-            </section>
-
-
-        </main>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script src="../js/init-aos.js"></script>
-        <script src="../js/carousel.js"></script>
-        <footer>
-            © Copyright Gianluca Rizzo, 2025
-        </footer>
-    </body>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/init-aos.js"></script>
+    <script src="../js/carousel.js"></script>
+    <footer>
+        © Copyright Gianluca Rizzo, 2025
+    </footer>
+</body>
 </html>
