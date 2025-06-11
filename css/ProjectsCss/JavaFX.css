@@ -1,5 +1,5 @@
-#x86 {
-  background-image: url('../images/Background.png');
+#JavaFX {
+  background-image: url('../../images/Background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -14,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.x86class{
+.JavaFXclass{
   align-items: center;
 }
 
